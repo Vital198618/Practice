@@ -1,0 +1,61 @@
+styles.css
+:root {
+/* Произвольный шрифт для начала (его можно заменить на официальный) */
+--brand-font: "BrandFont", "InterVar", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+--fallback-1: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+--fallback-2: "Open Sans", "Helvetica", sans-serif;
+--fallback-3: Roboto, "Helvetica Neue", Arial, sans-serif;
+--fallback-4: "Lato", "Segoe UI", sans-serif;
+--text-color: #1a1a1a;
+--bg-color: #ffffff;
+}
+@font-face {
+font-family: "BrandFont";
+src: local("BrandFont"); /* здесь можно указать локальный шрифт, если есть; если нет - браузер подхватит fallback */
+font-weight: 400 700;
+font-style: normal;
+}
+
+html, body {
+margin: 0;
+padding: 0;
+background: var(--bg-color);
+color: var(--text-color);
+font-family: var(--brand-font);
+}
+
+body {
+line-height: 1.6;
+padding: 20px;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+}
+
+header {
+text-align: center;
+padding: 20px 0 10px;
+}
+
+h1 {
+font-family: "BrandFont", var(--brand-font), var(--fallback-1);
+font-size: 28px;
+margin: 0;
+}
+
+.org-info {
+border-top: 1px solid #ddd;
+padding-top: 20px;
+}
+
+h2 {
+font-family: "BrandFont", var(--brand-font), var(--fallback-2);
+font-size: 22px;
+margin-top: 0;
+}
+
+p {
+margin: 0 0 12px;
+}

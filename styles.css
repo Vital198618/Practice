@@ -1,19 +1,18 @@
-styles.css
 :root {
-/* Произвольный шрифт для начала (его можно заменить на официальный) */
---brand-font: "BrandFont", "InterVar", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
---fallback-1: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
---fallback-2: "Open Sans", "Helvetica", sans-serif;
---fallback-3: Roboto, "Helvetica Neue", Arial, sans-serif;
---fallback-4: "Lato", "Segoe UI", sans-serif;
---text-color: #1a1a1a;
---bg-color: #ffffff;
+  --brand-font: "BrandFont", "InterVar", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --fallback-1: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --fallback-2: "Open Sans", "Helvetica", sans-serif;
+  --fallback-3: Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fallback-4: "Lato", "Segoe UI", sans-serif;
+  --text-color: #1a1a1a;
+  --bg-color: #ffffff;
 }
+
 @font-face {
-font-family: "BrandFont";
-src: local("BrandFont"); 
-font-weight: 400 700;
-font-style: normal;
+  font-family: "BrandFont";
+  src: local("BrandFont"); 
+  font-weight: 400 700;
+  font-style: normal;
 }
 
 html, body {
@@ -37,31 +36,73 @@ body {
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
-  flex: 1; /* Важно: контейнер занимает всё доступное пространство */
+  flex: 1;
 }
 
 header {
-text-align: center;
-padding: 20px 0 10px;
+  text-align: center;
+  padding: 20px 0 10px;
 }
 
 h1 {
-font-family: "BrandFont", var(--brand-font), var(--fallback-1);
-font-size: 28px;
-margin: 0;
+  font-family: "BrandFont", var(--brand-font), var(--fallback-1);
+  font-size: 28px;
+  margin: 0;
 }
 
 .org-info {
-border-top: 1px solid #ddd;
-padding-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-bottom: 40px;
 }
 
 h2 {
-font-family: "BrandFont", var(--brand-font), var(--fallback-2);
-font-size: 22px;
-margin-top: 0;
+  font-family: "BrandFont", var(--brand-font), var(--fallback-2);
+  font-size: 22px;
+  margin-top: 0;
 }
 
 p {
-margin: 0 0 12px;
+  margin: 0 0 12px;
+}
+
+/* СТИЛИ ДЛЯ ФУТЕРА */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  header {
+    padding: 15px 0 5px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  .org-info {
+    padding-top: 15px;
+    margin-bottom: 30px;
+  }
 }
